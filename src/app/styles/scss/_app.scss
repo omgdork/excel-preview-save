@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+html, body {
+  font: normal 14px/1.8 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.online-status {
+  display: inline-block;
+  margin-right: 10px;
+
+  &:before {
+    content: '';
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    height: 10px;
+    width: 10px;
+  }
+
+  &.online:before {
+    background: green;
+  }
+
+  &.offline:before {
+    background: red;
+  }
+}

@@ -1,0 +1,50 @@
+.modal {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &.shown {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 20px;
+    padding: 20px;
+
+    h3, footer {
+      flex-shrink: 0;
+      padding: 10px 0;
+    }
+
+    h3 {
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+    }
+
+    .body {
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+
+      .btn {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}

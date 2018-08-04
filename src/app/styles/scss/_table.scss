@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  margin: 20px 0;
+
+  tr {
+    &.selectable {
+      cursor: pointer;
+    }
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  th {
+    background: #eee;
+    text-transform: uppercase;
+  }
+
+  td {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+p.no-records {
+  padding: 10px;
+}
