@@ -14,12 +14,12 @@ describe('<DataGrid />', () => {
 
   it('should render "No records." in a paragraph if no properties are set.', () => {
     const wrapper = shallow(<DataGrid />);
-    expect(wrapper.html()).toEqual('<p>No records.</p>');
+    expect(wrapper.html()).toEqual('<p class="no-records">No records.</p>');
   });
 
   it('should render "some message" in a paragraph if the noDataMessage property is set to "some message".', () => {
     const wrapper = shallow(<DataGrid noDataMessage="some message" />);
-    expect(wrapper.html()).toEqual('<p>some message</p>');
+    expect(wrapper.html()).toEqual('<p class="no-records">some message</p>');
   });
 
   it('should render a table with headers and rows when an array of objects is set as the data property.', () => {

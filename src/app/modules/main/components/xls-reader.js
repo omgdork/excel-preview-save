@@ -120,7 +120,7 @@ class XLSReader extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="xls-reader">
         <input
           type="file"
           accept=".xls, .xlsx, .csv"
@@ -128,7 +128,7 @@ class XLSReader extends Component {
         />
         {this.state.entries.length > 0 && (
           <Modal
-            title="Preview"
+            title={`Preview: ${this.state.filename}`}
             isShown={this.state.isPreview}
             btnConfirm={{ text: 'Save', onClick: this.handleSave }}
             btnCancel={{ text: 'Cancel', onClick: this.handleCancel }}>

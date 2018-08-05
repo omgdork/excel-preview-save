@@ -13,9 +13,7 @@ store.runSaga(rootSaga);
 
 render(
   <Provider store={store}>
-    <div className="container">
-      <App />
-    </div>
+    <App />
   </Provider>,
   document.getElementById('root'),
 );

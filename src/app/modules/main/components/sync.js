@@ -4,8 +4,7 @@ import { Online } from 'react-detect-offline';
 import OnlineStatus from '../../../common/components/online-status';
 
 const Sync = ({ onSync }) => (
-  <div>
-    <OnlineStatus />
+  <div className="sync">
     <Online>
       <button
         type="button"
@@ -15,6 +14,7 @@ const Sync = ({ onSync }) => (
         Sync
       </button>
     </Online>
+    <OnlineStatus />
   </div>
 );
 

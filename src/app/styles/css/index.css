@@ -7,12 +7,24 @@ html, body {
   font: normal 14px/1.8 'Roboto', 'Helvetica Neue', 'Arial', sans-serif; }
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 0 10px; }
+  padding: 0 10px;
+  width: 940px; }
+
+h1 {
+  border-bottom: 1px solid #eee;
+  margin: 10px 0; }
+
+.upload-online-status-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0; }
 
 .online-status {
-  display: inline-block;
-  margin-right: 10px; }
+  display: inline-block; }
   .online-status:before {
     content: '';
     border-radius: 100%;
@@ -25,6 +37,9 @@ html, body {
   .online-status.offline:before {
     background: red; }
 
+.sync button {
+  margin-right: 10px; }
+
 .btn {
   background: #eee;
   border: 1px solid #ddd;
@@ -35,7 +50,9 @@ html, body {
 
 table {
   border-collapse: collapse;
-  margin: 20px 0; }
+  margin: 20px 0;
+  table-layout: fixed;
+  width: 100%; }
   table tr.selectable {
     cursor: pointer; }
   table th, table td {
@@ -78,6 +95,8 @@ p.no-records {
     .modal .modal-container .body {
       flex-grow: 1;
       overflow: auto; }
+      .modal .modal-container .body table {
+        width: auto; }
     .modal .modal-container footer {
       display: flex;
       justify-content: flex-end;

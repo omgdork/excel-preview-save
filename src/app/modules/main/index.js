@@ -67,9 +67,12 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
-        <Sync onSync={this.sync} />
-        <XLSReader onSave={this.save} />
+      <div className="container">
+        <h1>Excel Sheet Previewer</h1>
+        <div className="upload-online-status-wrapper">
+          <XLSReader onSave={this.save} />
+          <Sync onSync={this.sync} />          
+        </div>
         <DataGrid
           data={this.getFormattedData()}
           noDataMessage="No files yet."

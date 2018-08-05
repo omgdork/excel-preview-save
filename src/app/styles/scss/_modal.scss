@@ -35,6 +35,10 @@
     .body {
       flex-grow: 1;
       overflow: auto;
+
+      table {
+        width: auto;
+      }
     }
 
     footer {
